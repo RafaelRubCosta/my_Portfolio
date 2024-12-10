@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFÓLIO - View</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">my_Portfolio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="sobre-mim.html" class="menu_text">Sobre mim</a></li>
+            <li><a href="formacao.html" class="menu_text">Formação</a></li>
+            <li><a href="portfolio.html" class="menu_text">Portfólio</a></li>
+            <li><a href="contato.html" class="menu_text">Contato</a></li>
+            <li><a href="view.html" class="menu_text">View</a></li>
+        </ul>
+    </nav>
+    <!--Titulo-->
+    <h1 class="titulotop">View</h1>
+    <!--View-->
+    <section class="containercont">
+    <label for="nome" class="textcont" style="grid-column: 2/3;grid-row: 2/3;">Nome:</label>
+    <input type="text" id="nome" name="nome" class="textinput" style="grid-column: 2/3;grid-row: 3/4;">
+    <label for="email" class="textcont" style="grid-column: 2/3;grid-row: 4/5;">E-mail:</label>
+    <input type="text" id="email" name="email" class="textinput" style="grid-column: 2/3;grid-row: 5/6;">
+    <label for="msg" class="textcont" style="grid-column: 2/3;grid-row: 6/7;">Mensagem:</label>
+    <textarea type="text" id="msg" name="msg" class="textinput" style="grid-column: 2/3;grid-row: 7/8;resize: none;"></textarea>
+    </section>
+
+    <!--Script-->
+    <script>
+        let nome = localStorage.getItem("nome");
+        let email = localStorage.getItem("email");
+        let msg = localStorage.getItem("msg");
+
+        document.getElementById("nome").value = nome;
+        document.getElementById("email").value = email;
+        document.getElementById("msg").value = msg;
+    </script>
+    <p id="nome"></p>
+
+    <footer class="container2">
+        <p style="padding-top: 3px;">rafaelrubensas@gmail.com</p>
+        <p style="padding-top: 3px;">by Rafael Rubens Costa Rocha</p>
+        <p style="padding-top: 3px;">RU:3411016</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFÓLIO - Contato</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">my_Portfolio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="sobre-mim.html" class="menu_text">Sobre mim</a></li>
+            <li><a href="formacao.html" class="menu_text">Formação</a></li>
+            <li><a href="portfolio.html" class="menu_text">Portfólio</a></li>
+            <li><a href="contato.html" class="menu_text">Contato</a></li>
+            <li><a href="view.html" class="menu_text">View</a></li>
+        </ul>
+    </nav>
+
+    <!--Titulo-->
+    <h1 class="titulotop">Contato</h1>
+    <!--Form-->
+    <form class="containercont">
+        <label for="nome" style="grid-column: 2/3;grid-row:2/3" class="textcont">Nome:</label>
+        <input type="text" id="nome" name="nome" style="grid-column: 2/3;grid-row:3/4;" class="textinput">
+        <label for="email" style="grid-column: 2/3;grid-row:4/5" class="textcont">Email:</label>
+        <input type="text" id="email" name="email" style="grid-column: 2/3;grid-row:5/6;" class="textinput">
+        <label for="msg" style="grid-column:2/3;grid-row:6/7;" class="textcont">Envie sua mensagem:</label>
+        <textarea type="text" id="msg" name="msg" style="grid-column: 2/3;grid-row: 7/8;resize: none;" class="textinput"></textarea>
+        <button type="button" onclick="upD()" id="enviarbott">Enviar</button>
+    </form>
+    <script>
+        function upD(){
+            let nome = document.getElementById("nome").value;
+            let email = document.getElementById("email").value;
+            let msg = document.getElementById("msg").value;
+            localStorage.setItem("nome", nome);
+            localStorage.setItem("email", email);
+            localStorage.setItem("msg", msg);
+
+            window.location.href = "view.html";
+        }
+    </script>
+
+
+
+    <footer class="container2">
+        <p style="padding-top: 3px;">rafaelrubensas@gmail.com</p>
+        <p style="padding-top: 3px;">by Rafael Rubens Costa Rocha</p>
+        <p style="padding-top: 3px;">RU:3411016</p>
+    </footer>
+</body>
+</html>
